@@ -2,15 +2,15 @@
 String.prototype.isLetter = function() {
     return this.length === 1 && this.match(/[A-Z|a-z]/i);
 }
-
 String.prototype.isNum = function (){
     if(isNaN(parseInt(this)))return false;
     if(!isNaN(parseInt(this)))return true;
 }
 
+//From stackoverflow
 // Selection utilitites function
 const selection = window.getSelection()
-const headerElement = document.querySelector('#question-header a')
+const headerElement = document.querySelector('#element')
 selection.setBaseAndExtent(headerElement,0,headerElement,1)
 
 
@@ -23,4 +23,5 @@ function highlight(text) {
         inputText.innerHTML = innerHTML;
     }
 }
+
 
